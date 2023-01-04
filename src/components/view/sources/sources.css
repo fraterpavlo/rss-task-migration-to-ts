@@ -1,0 +1,155 @@
+.category-filter-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* border: 1px solid white; */
+}
+
+.category-filter-title {
+    font: inherit;
+    line-height: 1;
+    color: #70d6ff;
+}
+
+.category-filter-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 5px;
+}
+
+.category-filter-item {
+    cursor: pointer;
+    font: inherit;
+    line-height: 1;
+    color: #70d6ff;
+}
+
+.sources {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    align-items: center;
+    font: 300 1em 'Fira Sans', sans-serif;
+}
+
+.source__item {
+    background: none;
+    border: 2px solid #30c5ff;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: #70d6ff;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.source__item:hover,
+.source__item:focus {
+    border-color: #3fcc59;
+    color: #69db7e;
+    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+    transform: translateY(-0.25em);
+}
+
+.source__item-name {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+[data-source-category='all'] {
+    width: 50px;
+    text-align: center;
+    color: #ffffff;
+    background-image: linear-gradient(
+        0deg,
+        hsl(240deg 100% 18%) 1%,
+        hsl(323deg 100% 26%) 40%,
+        hsl(357deg 63% 46%) 48%,
+        hsl(36deg 84% 44%) 51%,
+        hsl(59deg 67% 43%) 51%,
+        hsl(71deg 65% 42%) 50%,
+        hsl(86deg 58% 43%) 50%,
+        hsl(107deg 49% 43%) 49%,
+        hsl(78deg 92% 30%) 49%,
+        hsl(50deg 100% 28%) 52%,
+        hsl(29deg 100% 33%) 60%,
+        hsl(0deg 69% 42%) 99%
+    );
+    border-radius: 40%;
+}
+
+[data-source-category='general'] {
+    color: #2980b9;
+    border-color: #2980b9;
+}
+
+[data-source-category='business'] {
+    color: #8e44ad;
+    border-color: #8e44ad;
+}
+
+[data-source-category='technology'] {
+    color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+[data-source-category='sports'] {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+[data-source-category='entertainment'] {
+    color: #f1c40f;
+    border-color: #f1c40f;
+}
+
+[data-source-category='health'] {
+    color: #f65fb2;
+    border-color: #f65fb2;
+}
+
+[data-source-category='science'] {
+    color: #84ffce;
+    border-color: #84ffce;
+}
+
+[data-source-category].hidden {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .sources {
+        height: 300px;
+    }
+
+    .source__item {
+        border-width: 1px;
+        line-height: 0.7;
+        margin: 0.3em;
+        padding: 0.7em 1.4em;
+
+    }
+}
+
+@media (max-width: 400px) {
+    .sources {
+        height: 300px;
+    }
+
+    .source__item {
+        border-width: 1px;
+        line-height: 0.5;
+        margin: 0.2em;
+        padding: 0.5em 1em;
+
+    }
+}
